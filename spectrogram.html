@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="spectro.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var spectrogram = new Spectrogram("viewport");
+                navigator.getUserMedia({audio: true}, spectrogram.gotStream, function() { console.log("error"); });
+            })
+        </script>
+    </head>
+    <body>
+        <canvas id="viewport" height="512" width="700" />
+    </body>
+</html>
+
