@@ -122,20 +122,15 @@ function Spectrogram(id) {
         }
         self.x++;
         self.x %= self.width;
-
     }
 
     self.drawFrame = function(data) {
         var data = data || self.getData();
-
         var colorData = self.colorizeData(data)
 
         self.addColumn(colorData);
-
         self.imageData.data.set(self.buf8);
-
         self.ctx.putImageData(self.imageData, 0, 0);
-
     }
 
     self.animate = function() {
